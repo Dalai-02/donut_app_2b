@@ -1,3 +1,8 @@
+import 'package:donut_app_2b/tabs/burger_tab.dart';
+import 'package:donut_app_2b/tabs/donut_tab.dart';
+import 'package:donut_app_2b/tabs/pancakes_tab.dart';
+import 'package:donut_app_2b/tabs/pizza_tab.dart';
+import 'package:donut_app_2b/tabs/smoothie_tab.dart';
 import 'package:donut_app_2b/utils/my_tab.dart';
 import 'package:flutter/material.dart';
 
@@ -62,11 +67,20 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-          //TabBar
+          //TabBar (Barra de pestañas)
           TabBar(tabs: myTabs),
       
-          //TabBarView
-      
+          //TabBarView (Contenido de pestañas)
+          Expanded(
+            child: TabBarView(children: [
+            DonutTab(),
+            BurgerTab(),
+            SmoothieTab(),
+            PancakesTab(),
+            PizzaTab(),
+            ]),
+          )
+
           //Carrito
           ] )
       ),
