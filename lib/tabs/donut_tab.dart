@@ -22,7 +22,9 @@ class DonutTab extends StatelessWidget {
       //Organiza como distribuir
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount( //
         //Numero de columnas
-        crossAxisCount: 2),
+        crossAxisCount: 2,
+        //Relacion de aspecto (proporción de aspecto)
+        childAspectRatio: 1/1.5),
       itemBuilder: (context, index) {
         return DonutTile(
           donutFlavor: donutsOnSale[index][0],
