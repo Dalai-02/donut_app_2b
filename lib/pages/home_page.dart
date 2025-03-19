@@ -79,10 +79,46 @@ class _HomePageState extends State<HomePage> {
             PancakesTab(),
             PizzaTab(),
             ]),
-          )
+          ),
 
           //Carrito
-          ] )
+          Container(
+            color: Colors.white , 
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              //Between: Pone los elementos en los extremos de la fila
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(padding: EdgeInsets.only(left: 28),
+                child: Column(
+                  //Alinear a la izquierda (.start)
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [Text('2 items | \$45', style: TextStyle(
+                  fontSize: 18, 
+                  fontWeight: FontWeight.bold),
+                  ),
+                  Text("Delivery Charges Inclued", style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.grey[400]),
+                  ),
+                  ],
+                )),
+                ElevatedButton(
+                      onPressed: (){},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.pinkAccent[50],
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 24, 
+                          vertical: 12),
+                      ),
+                      child: const Text('View Cart', 
+                      style: TextStyle(
+                      fontWeight: FontWeight.bold
+                      ),),)
+              ],
+            )
+          ),
+          ] ),
       ),
     );
   }
