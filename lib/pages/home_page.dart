@@ -14,6 +14,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int itemCount = 0; // Cantidad de ítems
+  double totalPrice = 0.0; // Precio total
+
+  // Función para agregar un ítem
+  void addItem(double price) {
+    setState(() {
+      itemCount++;
+      totalPrice += price;
+    });
+  }
+
   //Lista de Tabs
   List<Widget> myTabs = [
     //DonutTab

@@ -1,4 +1,4 @@
-import 'package:donut_app_2b/utils/pizzza_tile.dart';
+import 'package:donut_app_2b/utils/pizza_tile.dart';
 import 'package:flutter/material.dart';
 
 class PizzaTab extends StatelessWidget {
