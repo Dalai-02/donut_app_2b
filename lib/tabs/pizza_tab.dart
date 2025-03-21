@@ -1,18 +1,18 @@
-import 'package:donut_app_2b/utils/donut_tile.dart';
+import 'package:donut_app_2b/utils/pizzza_tile.dart';
 import 'package:flutter/material.dart';
 
 class PizzaTab extends StatelessWidget {
   //Lista de Donas
-  final List donutsOnSale = [ 
-    //[doonutFlavor, donutStore, donutPrice, donutColor, imageName]
-    ["Ice Cream", "Krispy Kreme", "36", Colors.blue, "lib/images/icecream_donut.png"],
-    ["Strawberry", "Dunkin Donuts", "54", Colors.red,  "lib/images/strawberry_donut.png"],
-    ["Grape Ape", "Costco", "84", Colors.purple, "lib/images/grape_donut.png"],
-    ["Choco", "Walmart", "95", Colors.brown, "lib/images/chocolate_donut.png"],
-    ["Ice Cream", "Krispy Kreme", "36", Colors.blue, "lib/images/icecream_donut.png"],
-    ["Strawberry", "Dunkin Donuts", "54", Colors.red,  "lib/images/strawberry_donut.png"],
-    ["Grape Ape", "Costco", "84", Colors.purple, "lib/images/grape_donut.png"],
-    ["Choco", "Walmart", "95", Colors.brown, "lib/images/chocolate_donut.png"],
+  final List pizzasOnSale = [ 
+    //[doonutFlavor, pizzaStore, pizzaPrice, pizzaColor, imageName]
+    ["Anchovies", "Pizza Hut", "36", Colors.red, "lib/images/anchoas_pizza.png"],
+    ["Shrimp", "Messinas", "54", Colors.yellow,  "lib/images/camarones_pizza.png"],
+    ["Mushroom", "Costco", "84", Colors.brown, "lib/images/champiñon_pizza.png"],
+    ["Pepperoni", "Domino's", "95", Colors.purple, "lib/images/peperoni_pizza.png"],
+    ["Peppers", "Pizza y corre", "36", Colors.green, "lib/images/pimiento_pizza.png"],
+    ["Salami", "Sanetis", "84", Colors.brown, "lib/images/salami_pizza.png"],
+    ["Pineapple", "Superpizza", "54", Colors.yellow,  "lib/images/piña_pizza.png"],
+    ["Sausage", "Baleros", "95", Colors.red, "lib/images/salchicha_pizza.png"],
    ];
 
   PizzaTab({super.key});
@@ -21,8 +21,8 @@ class PizzaTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder( //Grid View parametro para acomodar elementos en una cuadricula
       // Elementos de nuestra lista
-      itemCount: donutsOnSale.length, //Numero de elementos itemCount
-      padding: const EdgeInsets.all(18),
+      itemCount: pizzasOnSale.length, //Numero de elementos itemCount
+      padding: const EdgeInsets.all(10),
       //Organiza como distribuir
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount( //
         //Numero de columnas
@@ -30,12 +30,12 @@ class PizzaTab extends StatelessWidget {
         //Relacion de aspecto (proporción de aspecto)
         childAspectRatio: 1/1.5),
       itemBuilder: (context, index) {
-        return DonutTile(
-          donutFlavor: donutsOnSale[index][0],
-          donutStore: donutsOnSale[index][1],
-          donutPrice: donutsOnSale[index][2],
-          donutColor: donutsOnSale[index][3],
-          imageName: donutsOnSale[index][4],
+        return PizzaTile(
+          pizzaFlavor: pizzasOnSale[index][0],
+          pizzaStore: pizzasOnSale[index][1],
+          pizzaPrice: pizzasOnSale[index][2],
+          pizzaColor: pizzasOnSale[index][3],
+          imageName: pizzasOnSale[index][4],
         );
       });
   }
